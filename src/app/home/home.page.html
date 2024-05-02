@@ -1,20 +1,39 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+<ion-content [fullscreen]="true"  scroll-assist scroll-padding forceOverscroll="true">
+	<div class="container">
+		<h1>
+			Login
+		</h1>
+			
+		<div class="mb-3">
+			<label for="email" class="form-label">Email</label>
+			<input
+				type="text"
+				class="form-control"
+				id="email"
+				name="email"
+				value = ""
+				placeholder="Enter your email"
+				autofocus />
+		</div>
+		<div class="mb-3 form-password-toggle">
+			<div class="d-flex justify-content-between">
+				<label class="form-label" for="password">Password</label>
+				<a href="/forgot-password">
+				<small>Forgot Password?</small>
+				</a>
+			</div>
+			<div class="input-group input-group-merge">
+				<input
+					type="password"
+					id="password"
+					class="form-control"
+					name="password"
+					placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;"
+					aria-describedby="password" />
+				<span class="input-group-text cursor-pointer"><i class="bx bx-hide"></i></span>
+			</div>
+		</div>
+		<button class="btn btn-primary d-grid w-100"  (click)="goToDashboard()">Sign in</button>
+	</div>
 </ion-content>
